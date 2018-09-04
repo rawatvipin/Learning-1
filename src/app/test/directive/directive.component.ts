@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent implements OnInit {
-
-  constructor() { }
+  data: any;
+  constructor() {
+    this.data = { color: null, emotion: 'happy' };
+  }
 
   ngOnInit() {
   }
