@@ -11,7 +11,34 @@ export class TestDirective {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
+    debugger
     this.setColor(this.highlight.color || this.defaultColor || 'gray');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.setColor(null);
+  }
+
+  private setColor(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+
+}
+
+
+@Directive({
+  selector: '[appHighlight2]'
+})
+export class Test2Directive {
+  @Input('appHighlight2') highlight;
+  @Input() defaultColor = '';
+  constructor(private el: ElementRef) {
+    this.setColor((this.highlight) ? this.highlight : this.defaultColor);
+  }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    debugger
+    this.setColor('yellow');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
