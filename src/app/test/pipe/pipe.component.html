@@ -1,0 +1,4 @@
+Enter Text:<input type="text" [(ngModel)]="enteredValue" value="enteredValue" ><br>
+Slice Start Index:<input type="text" [(ngModel)]="startIndex" value="enteredValue" ><br>
+Slice End Index<input type="text" [(ngModel)]="count" value="enteredValue" ><br>
+Entered Value: {{enteredValue  | removeSpace:startIndex:count}}
