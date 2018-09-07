@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { DirectiveComponent } from './directive/directive.component';
 import { PracticeComponent } from './practice/practice.component';
 import { TestRoutingModule } from './test-routing.module';
-import { TestDirective } from './test.directive';
+import { TestDirective, Test2Directive } from './test.directive';
 import { FormsModule } from '../../../node_modules/@angular/forms';
 import { TestPipe } from './test.pipe';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { TestPipe } from './test.pipe';
     FormsModule,
     TestRoutingModule
   ],
-  declarations: [DirectiveComponent, PracticeComponent, TestDirective, TestPipe]
+  declarations: [DirectiveComponent, PracticeComponent,Test2Directive , TestDirective, TestPipe, PipeComponent]
 })
 export class TestModule { }
