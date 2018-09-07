@@ -11,7 +11,6 @@ export class TestDirective {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    debugger
     this.setColor(this.highlight.color || this.defaultColor || 'gray');
   }
 
@@ -37,7 +36,6 @@ export class Test2Directive {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    debugger
     this.setColor('yellow');
   }
 
