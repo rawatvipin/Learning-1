@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipeComponent implements OnInit {
 
-  constructor() { }
+  heroes: any[] = [];
+  canFly = true;
+  constructor() { this.reset(); }
 
   ngOnInit() {
+  }
+
+  addHero(num: number) {
+    if (!num) { return; }
+    const hero = { name: num, canFly: ((num > 100) ? true : false) };
+    this.heroes.push(hero);
+  }
+
+  reset() {
+    this.heroes = [];
   }
 
 }

@@ -5,7 +5,7 @@ import { PracticeComponent } from './practice/practice.component';
 import { TestRoutingModule } from './test-routing.module';
 import { TestDirective, Test2Directive } from './test.directive';
 import { FormsModule } from '../../../node_modules/@angular/forms';
-import { TestPipe } from './test.pipe';
+import { TestPipe, FlyingHeroesPipe } from './test.pipe';
 import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
@@ -14,6 +14,7 @@ import { PipeComponent } from './pipe/pipe.component';
     FormsModule,
     TestRoutingModule
   ],
-  declarations: [DirectiveComponent, PracticeComponent,Test2Directive , TestDirective, TestPipe, PipeComponent]
+  declarations: [DirectiveComponent, PracticeComponent,
+    Test2Directive, TestDirective, TestPipe, FlyingHeroesPipe, PipeComponent]
 })
 export class TestModule { }

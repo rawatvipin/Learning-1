@@ -1,4 +1,15 @@
-Enter Text:<input type="text" [(ngModel)]="enteredValue" value="enteredValue" ><br>
-Slice Start Index:<input type="text" [(ngModel)]="startIndex" value="enteredValue" ><br>
-Slice End Index<input type="text" [(ngModel)]="count" value="enteredValue" ><br>
-Entered Value: {{enteredValue  | removeSpace:startIndex:count}}
+<h1>Pure Pipe</h1>
+Enter Text:
+<input type="text" [(ngModel)]="enteredValue" value="enteredValue">
+<br> Slice Start Index:
+<input type="text" [(ngModel)]="startIndex" value="enteredValue">
+<br> Slice End Index
+<input type="text" [(ngModel)]="count" value="enteredValue">
+<br> Entered Value: {{enteredValue | customSlice:startIndex:count}}
+<h1>Impure Pipe</h1>
+Number > 100 Show:
+<input type="text" #box (keyup.enter)="addHero(box.value); box.value=''" placeholder="Type Number & Press Enter">
+<button (click)="reset()">Reset</button>
+<div *ngFor="let hero of  (heroes | flyingHeroes)">
+    {{hero.name}}
+</div>
