@@ -1,0 +1,19 @@
+<form #tf="ngForm">
+  Form Value: {{tf.value | json}}
+  <br>
+  <div class="form-group">
+    Name:
+    <input type="text" name="name" ngModel>
+  </div>
+  <br> Mobile Number:
+  <input type="text" name="mobileno" ngModel>
+  <br>
+  <legend>Address
+  </legend>
+  <div ngModelGroup="address">
+    State:
+    <input type="text" name="state" ngModel>
+    <br> Pincode:
+    <input type="text" name="pincode" ngModel>
+  </div>
+</form>
